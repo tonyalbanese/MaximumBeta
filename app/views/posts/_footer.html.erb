@@ -1,0 +1,24 @@
+<div style="background: #2c1819">
+  <div class="row">
+    <div class="large-6 columns">
+
+    </div>
+    <div class="large-6 columns">
+      <small><p style="color: white; float: right; padding-left: 10px">Maximum Beta was created by Tony Albanese</p></small>
+       <small>
+          <p style="color: white; float: right;">
+           <% if user_signed_in? %>
+            <%= link_to 'New Post', new_post_path %>  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Admin", new_user_session_path, class: "footer-text" %>
+          <% end %>
+          </p>
+         </small>
+    </div>
+    
+   
+   
+    </div>
+    </div>
+  </div> 
+</div>
