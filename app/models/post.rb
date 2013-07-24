@@ -12,6 +12,8 @@ class Post < ActiveRecord::Base
   has_attached_file :image
   
   scope :draft, -> { where(draft: true) }
-  scope :published, -> { where(draft: false) } 
+  scope :published, -> { where(draft: false) }
+  
+  
 
 end

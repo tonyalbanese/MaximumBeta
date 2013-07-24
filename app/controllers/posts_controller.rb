@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.paginate(:per_page => 3, :page => params[:page]).order('id DESC')
 
     respond_to do |format|
       format.html # index.html.erb

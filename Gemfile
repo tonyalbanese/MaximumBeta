@@ -29,6 +29,7 @@ gem 'simple_form'
 gem "paperclip", "~> 3.0"
 gem "thin", "~> 1.5.1"
 gem 'kaminari'
+gem 'will_paginate', '~> 3.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

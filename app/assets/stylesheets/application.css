@@ -25,3 +25,5 @@ p a:hover {color: #c37c7c}
 
 a.button {background: #c37c7c; border: 0px;}
 a.button:hover {background: #962c2c; border: 0px}
+
+ul a {color: #c37c7c;}

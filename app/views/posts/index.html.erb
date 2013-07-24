@@ -5,36 +5,36 @@
 <div class="row">
   <div class="large-4 push-8 columns">
     <p style="padding-top: 20px; text-align: center"><%= image_tag("hero.jpg") %></p>
-    <h6 style="text-align: center">Hero or Villian?</h6>
-    <p style="text-align: center">At Maximum Beta, Tony Albanese shares his thoughts about business, entertainment and shits & giggles that enter his mind. Enjoy.</p>
-    
-      <h6 style="text-align: center">Want to Get in Touch?</h6>
-      <p style="text-align: center"><a class="button" href="mailto:albanesetr@gmail.com">Email Him!</a> <br> Or connect using <a style="color: #c37c7c" href="http://www.twitter.com/#!/albanesetr">Twitter</a> and <a style="color: #c37c7c" href="http://www.linkedin.com/in/albanesetr">LinkedIn</a></p>
+    <h6 style="text-align: center; color: #363333">Tony Albanese | Writer & Marketer</h6>
+    <p style="text-align: center">"This is a place for business & giggles."</p>
+
+      <p style="text-align: center"><a class="button" href="mailto:albanesetr@gmail.com">Email Tony!</a> <br> Or connect using <a style="color: #c37c7c" href="http://www.twitter.com/#!/albanesetr">Twitter</a> and <a style="color: #c37c7c" href="http://www.linkedin.com/in/albanesetr">LinkedIn</a></p>
   </div>
   
   
   <div class="large-8 pull-4 columns">
 
 
-        <% @posts.reverse_each do |post| %>
+        <% @posts.each do |post| %>
 
-              
+             
               <% if user_signed_in? %>
                   <% if post.draft == true %>
-                  <h6 style="float: left; padding-right: 10px; padding-left: 10px; color: red; margin-right: 10px" class="panel">DRAFT</h6><h1 style="font-family: latohairline"><%= link_to post.title, post %></h1>
-                  <p style="margin-top: -20px"><small>Posted by <%= post.user.name %></small></p>
-                  <p><%= post.description.html_safe %></p>
-                  <div><p><small><%= link_to 'Edit', edit_post_path(post) %> |
-                  <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></small></p></div>
-                  <hr>
+                    <h6 style="float: left; padding-right: 10px; padding-left: 10px; color: red; margin-right: 10px" class="panel">DRAFT</h6><h1 style="font-family: latohairline"><%= link_to post.title, post %></h1>
+                    <p style="margin-top: -20px"><small>Posted by <%= post.user.name %></small></p>
+                    <p><%= post.description.html_safe %></p>
+                    <div><p><small><%= link_to 'Edit', edit_post_path(post) %> |
+                    <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></small></p></div>
+                    <hr>
+                   
                   <% else %>
-                  <h1 style="font-family: latohairline"><%= link_to post.title, post %></h1>
-                  <p style="margin-top: -20px"><small>Posted by <%= post.user.name %></small></p>
-                  <p><%= post.description.html_safe %></p>
-                  <div><p><small><%= link_to 'Edit', edit_post_path(post) %> |
-                  <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></small></p></div>
-                   <hr>
-                  <% end %>
+                    <h1 style="font-family: latohairline"><%= link_to post.title, post %></h1>
+                    <p style="margin-top: -20px"><small>Posted by <%= post.user.name %></small></p>
+                    <p><%= post.description.html_safe %></p>
+                    <div><p><small><%= link_to 'Edit', edit_post_path(post) %> |
+                    <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></small></p></div>
+                     <hr>
+                    <% end %>
               <% else %>
                   <% if post.draft == false %>
                     <h1 style="font-family: latohairline"><%= link_to post.title, post %></h1>
@@ -42,10 +42,13 @@
                     <p><%= post.description.html_safe %></p>
                     <hr>
                   <% end %>
+              <% end %>
 
-              
-       <% end %>
-<% end %>
+
+        <% end %>
+        <div style="float: right">
+          <ul class="pagination">
+        <%= will_paginate @posts %></ul></div>
   </div>
   
 </div>
