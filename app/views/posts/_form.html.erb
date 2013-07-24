@@ -20,16 +20,17 @@
     <%= f.text_area :description %>
   </div>
   
-  
-  
   <div>
     <%= f.input :image, label: "Upload an Image" %>
   </div>
   
   <br>
+
+    <div class="large-3 columns">
+    <%= f.select :draft, [['Save as Draft', true], ['Publish Post', false]] %>
+  </div>
     
   <div class="actions">
-    <p><%= f.submit "Publish", :name => "publish" %>
-    <%= f.submit "Save as Draft", :name => "draft" %></p>
+    <p><%= f.submit "Submit" %></p>
   </div>
 <% end %>
