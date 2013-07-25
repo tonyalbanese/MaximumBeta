@@ -31,6 +31,7 @@ gem "thin", "~> 1.5.1"
 gem 'kaminari'
 gem 'will_paginate', '~> 3.0'
 gem 'aws-sdk'
+gem 'sqlite3-ruby', '~> 1.3.3'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
