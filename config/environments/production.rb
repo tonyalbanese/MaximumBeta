@@ -70,4 +70,14 @@ Max::Application.configure do
 
   # Precompile additional assets
   config.assets.precompile += %w( .svg .eot .woff .ttf )
+  
+  #paperclip should use Amazon S3 on heroku
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => "maximumbeta",
+    :access_key_id => "AKIAIYG7GA2A6CJXUQWQ",
+    :secret_access_key => E"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"
+    }
+  }
 end
