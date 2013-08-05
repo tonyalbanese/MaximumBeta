@@ -77,7 +77,8 @@ Max::Application.configure do
   :s3_credentials => {
     :bucket => "maximumbeta",
     :access_key_id => "AKIAIYG7GA2A6CJXUQWQ",
-    :secret_access_key => E"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"
+    :secret_access_key => "nnoValens0W8sf01qtkhMako4DWZ7VB8WDrrQKod"
     }
+  
   }
 end
