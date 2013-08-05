@@ -11,9 +11,8 @@
  *= require_self
  *= require_pages 
  *= require_tree .
- */
  *= require foundation_and_overrides
-
+ */
 
 
 h1 {color: #c37c7c;}
