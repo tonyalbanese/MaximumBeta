@@ -21,7 +21,7 @@
               <% if user_signed_in? %>
                   <% if post.draft == true %>
                     <h6 style="float: left; padding-right: 10px; padding-left: 10px; color: red; margin-right: 10px" class="panel">DRAFT</h6><h1 style="font-family: latohairline"><%= link_to post.title, post %></h1>
-                    <p style="margin-top: -20px"><small>Posted by <%= post.user.name %></small></p>
+                    <p style="margin-top: -20px"></p>
                     <p><%= post.description.html_safe %></p>
                     <div><p><small><%= link_to 'Edit', edit_post_path(post) %> |
                     <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></small></p></div>
@@ -29,7 +29,7 @@
                    
                   <% else %>
                     <h1 style="font-family: latohairline"><%= link_to post.title, post %></h1>
-                    <p style="margin-top: -20px"><small>Posted by <%= post.user.name %></small></p>
+                    <p style="margin-top: -20px"></p>
                     <p><%= post.description.html_safe %></p>
                     <div><p><small><%= link_to 'Edit', edit_post_path(post) %> |
                     <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></small></p></div>
@@ -38,7 +38,7 @@
               <% else %>
                   <% if post.draft == false %>
                     <h1 style="font-family: latohairline"><%= link_to post.title, post %></h1>
-                    <p style="margin-top: -20px"><small>Posted by <%= post.user.name %></small></p>
+                    <p style="margin-top: -20px"></p>
                     <p><%= post.description.html_safe %></p>
                     <hr>
                   <% end %>
