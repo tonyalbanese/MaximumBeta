@@ -13,7 +13,7 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Maximum Beta: Tony Albanese Blog and Portfolio" %></title>
+  	<title><%= @title %> Maximum Beta from Tony Albanese</title>
   	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
 	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
